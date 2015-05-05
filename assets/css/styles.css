@@ -5,6 +5,10 @@
     font-family: "Times New Roman";
 }
 
+.center {
+    text-align: center;
+}
+
 /* Front Page Styles */
 #gamesTab {
     background-color: red;
