@@ -171,6 +171,7 @@ function checkEat(){
 
 function endGame(){
     running = 0;
+    alert("You lose.");
     location.reload();
 }
 
