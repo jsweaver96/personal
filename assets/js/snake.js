@@ -50,8 +50,8 @@ $(document).ready(function(){
     });
 
     $(document).keydown(function(event){
-	if (!running){
-	    alert("Keydown : " + event.which);
+	if (running){
+	    //alert("Keydown : " + event.which);
 	    changeDir(event.which);
 	}
     });
@@ -146,11 +146,11 @@ function moveSnake(){
 
 function shiftSnake(x,y){
     if (snakeHead.x + x < 0 || snakeHead.x + x >= bxSize){
-	alert("X bounds");
+	//alert("X bounds");
 	endGame();
     }
     else if (snakeHead.y + y < 0 || snakeHead.y + y >= bySize){
-	alert("Y bounds");
+	//alert("Y bounds");
 	endGame();
     }
     else {
