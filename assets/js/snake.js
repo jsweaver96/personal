@@ -164,7 +164,7 @@ function shiftSnake(x,y){
 	checkEat();
 	boardArray[snakeHead.x][snakeHead.y] = setRect(boardArray[snakeHead.x][snakeHead.y],headType);
 	var snakeEnd = snakeBody.pop();
-	snakeBody.unshift({x:snakeEnd.x,y:snakeEnd.y);
+	snakeBody.unshift({x:snakeEnd.x,y:snakeEnd.y});
 	snakeBody[0].x = lastSegX;
 	snakeBody[0].y = lastSegY;
 	if (bodyToAdd){
