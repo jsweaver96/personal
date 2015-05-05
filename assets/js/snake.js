@@ -51,20 +51,17 @@ $(document).ready(function(){
 
     $(document).keydown(function(event){
 	if (running){
-	    //alert("Keydown : " + event.which);
 	    changeDir(event.which);
 	}
     });
 });
 
 function gameStart(){
-    //alert("Start game");
     gameInit();
-    setInterval(function(){moveSnake();}, 100);
+    setInterval(function(){moveSnake();}, 50);
 }
 
 function setRect(seg, type){
-    //alert("Start setRect");
     seg.type = type;
     if (seg.type == openType){
 	seg.html.css("background-color",openClr);
@@ -78,7 +75,6 @@ function setRect(seg, type){
     else if (seg.type == bodyType){
 	seg.html.css("background-color",bodyClr);
     }
-    //alert("End setRect");
     return seg;
 }
 
@@ -99,20 +95,15 @@ function gameInit(){
 	    $("#snakeArea").append(boardArray[i][j].html);
 	}
     }
-   // alert("Board init");
     snakeHead.x = bxSize / 2;
     snakeHead.y = bySize / 2;
-    //alert("Snake body init");
     snakeBody.push({x:snakeHead.x,y:snakeHead.y - 1});
     snakeBody.push({x:snakeHead.x,y:snakeHead.y - 2});
-   // alert("Snake body push initial segs");
     boardArray[snakeHead.x][snakeHead.y] = setRect(boardArray[snakeHead.x][snakeHead.y],headType);
     boardArray[snakeBody[0].x][snakeBody[0].y] = setRect(boardArray[snakeBody[0].x][snakeBody[0].y],bodyType);
     boardArray[snakeBody[1].x][snakeBody[1].y] = setRect(boardArray[snakeBody[1].x][snakeBody[1].y],bodyType);
     dir = mDown;
-    //alert("Snake init");
     setFood();
-    //alert("Food init");
 }
 
 function changeDir(key){
@@ -131,7 +122,6 @@ function changeDir(key){
 }
 
 function moveSnake(){
-    //alert("Move snake");
     if (dir == mLeft){
 	shiftSnake(-1,0);
     }
@@ -148,11 +138,9 @@ function moveSnake(){
 
 function shiftSnake(x,y){
     if (snakeHead.x + x < 0 || snakeHead.x + x >= bxSize){
-	//alert("X bounds");
 	endGame();
     }
     else if (snakeHead.y + y < 0 || snakeHead.y + y >= bySize){
-	//alert("Y bounds");
 	endGame();
     }
     else {
@@ -186,7 +174,6 @@ function checkEat(){
     else {
 	for (var i = 0; i < bodySize; i++){
 	    if (snakeHead.x == snakeBody[i].x && snakeHead.y == snakeBody[i].y){
-		alert("Eat self " + snakeHead.x + ", " + snakeHead.y + " " + snakeBody[i].x + ", " + snakeBody[i].y);
 		endGame();
 	    }
 	}
@@ -215,6 +202,5 @@ function setFood(){
 	    }
 	}
     }
-    //alert("end set food " + foodBit.x + ", " + foodBit.y);
     boardArray[foodBit.x][foodBit.y] = setRect(boardArray[foodBit.x][foodBit.y],foodType);
 }
