@@ -16,7 +16,6 @@ $(document).ready(function(){
 
     $(".gameCell").click(function(event){
 	var pos = $(this).position();
-	alert("X " + pos.left + " Y " + pos.top);
 	makeMove(pos.left / 100, pos.top / 100);
     });
 });
@@ -33,7 +32,7 @@ function makeBoard(){
 	    gameArray[i][j] = {html:$("<div></div>"),checked:false,owner:0};
 	    gameBoard.append(gameArray[i][j].html);
 	    gameArray[i][j].html.addClass("gameCell");
-	    //gameArray[i][j].html.css("background-color","blue");
+	    gameArray[i][j].html.css("background-color","white");
 	    gameArray[i][j].html.width(100);
 	    gameArray[i][j].html.height(100);
 	    gameArray[i][j].html.css({
