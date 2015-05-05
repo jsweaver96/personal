@@ -143,9 +143,11 @@ function moveSnake(){
 
 function shiftSnake(x,y){
     if (snakeHead.x + x < 0 || snakeHead.x + x >= bxSize){
+	alert("X bounds");
 	endGame();
     }
     else if (snakeHead.y + y < 0 || snakeHead.y + y >= bySize){
+	alert("Y bounds");
 	endGame();
     }
     else {
@@ -177,6 +179,7 @@ function checkEat(){
     else {
 	for (var i = 0; i < bodySize; i++){
 	    if (snakeHead.x == snakeBody[i].x && snakeHead.y == snakeBody[i].y){
+		alert("Eat self " + snakeHead.x + ", " + snakeHead.y + " " + snakeBody[i].x + ", " + snakeBody[i].y);
 		endGame();
 	    }
 	}
