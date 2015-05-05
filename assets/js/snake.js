@@ -57,7 +57,7 @@ $(document).ready(function(){
 function gameStart(){
     //alert("Start game");
     gameInit();
-    setInterval(function(){moveSnake()}, 100);
+    setInterval(function(){moveSnake();}, 100);
 }
 
 function setRect(seg, type){
@@ -125,6 +125,7 @@ function changeDir(key){
 }
 
 function moveSnake(){
+    alert("Move snake");
     if (dir == mLeft){
 	shiftSnake(-1,0);
     }
