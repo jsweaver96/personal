@@ -50,6 +50,7 @@ $(document).ready(function(){
     });
 
     $("#snakeArea").keydown(function(event){
+	alert("Keydown : " + event.which);
 	changeDir(event.which);
     });
 });
