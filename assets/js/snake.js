@@ -63,6 +63,7 @@ function gameStart(){
 }
 
 function setRect(seg, type){
+    alert("Start setRect");
     seg.type = type;
     if (seg.type == openType){
 	seg.html.css("background-color",openClr);
@@ -76,6 +77,7 @@ function setRect(seg, type){
     else if (seg.type == bodyType){
 	seg.html.css("background-color",bodyClr);
     }
+    alert("End setRect");
     return seg;
 }
 
@@ -95,13 +97,13 @@ function gameInit(){
 	    });
 	}
     }
-    alert("Board init");
+   // alert("Board init");
     snakeHead.x = bxSize / 2;
     snakeHead.y = bySize / 2;
-    alert("Snake body init");
+    //alert("Snake body init");
     snakeBody.push({x:snakeHead.x,y:snakeHead.y - 1});
     snakeBody.push({x:snakeHead.x,y:snakeHead.y - 2});
-    alert("Snake body push initial segs");
+   // alert("Snake body push initial segs");
     boardArray[snakeHead.x][snakeHead.y] = setRect(boardArray[snakeHead.x][snakeHead.y],headType);
     dir = mUp;
     alert("Snake init");
@@ -191,7 +193,7 @@ function setFood(){
     var checked = false;
     while(!checked){
 	checked = true;
-	foodBit = {x:(Math.random() * (bxSize - 2) + 1),y:(Math.random() * (bxSize - 2) + 1)};
+	foodBit = {x:Math.random() * (bxSize - 2) + 1,y:Math.random() * (bxSize - 2) + 1};
 	if (foodBit.x == snakeHead.x && foodBit.y == snakeHead.y){
 	    checked = false;
 	    continue;
@@ -203,5 +205,6 @@ function setFood(){
 	    }
 	}
     }
+    alert("end set food");
     boardArray[foodBit.x][foodBit.y] = setRect(boardArray[foodBit.x][foodBit.y],foodType);
 }
