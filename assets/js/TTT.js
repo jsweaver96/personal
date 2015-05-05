@@ -23,7 +23,7 @@ $(document).ready(function(){
 function makeBoard(){
     var gameBoard = $("<div></div>");
     gameBoard.addClass("TTT");
-    gameBoard.css("background-color","red");
+    gameBoard.css("background-color","white");
     //gameBoard.css("z-index","0");
     $("h1").after(gameBoard);
     for (var i = 0; i < 3; i++){
@@ -49,11 +49,11 @@ function makeMove(x,y){
 	gameArray[x][y].owner = gameTurn % 2 + 1;
 	if (gameTurn % 2 + 1 == 1){
 	    gameArray[x][y].html.text("X");
-	    //gameArray[x][y].html.css("font-size","50");
-	)
+	    gameArray[x][y].html.css("font-size","50");
+	}
 	else {
 	    gameArray[x][y].html.text("O");
-	    //gameArray[x][y].html.css("font-size","50"); 
+	    gameArray[x][y].html.css("font-size","50"); 
 	}
 	if (checkWin()){
 	    alert("Player " + (gameTurn % 2 + 1) + " Wins!");
