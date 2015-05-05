@@ -55,7 +55,7 @@ $(document).ready(function(){
 });
 
 function gameStart(){
-    alert("Start game");
+    //alert("Start game");
     gameInit();
     while(running){
 	moveSnake();
@@ -95,12 +95,14 @@ function gameInit(){
 	    });
 	}
     }
-    alert("Board init");
+    //alert("Board init");
     snakeHead.x = bxSize / 2;
     snakeHead.y = bySize / 2;
     snakeBody = [];
+    alert("Snake body init");
     snakeBody.push({x:snakeHead.x,y:snakeHead.y - 1});
     snakeBody.push({x:snakeHead.x,y:snakeHead.y - 2});
+    alert("Snake body push initial segs");
     boardArray[snakeHead.x][snakeHead.y] = setRect(boardArray[snakeHead.x][snakeHead.y],headType);
     dir = mUp;
     alert("Snake init");
