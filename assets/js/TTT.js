@@ -4,7 +4,10 @@ var gameTurn = 0;
 $(document).ready(function(){
     makeBoard();
     $(".gameCell").mouseover(function(){
-	$(this).css("background-color","gray");
+	var pos = $(this).position();
+	if (getTile(pos.left % 100, pos.top % 100) === null){
+	    $(this).css("background-color","gray");
+	}
     });
     
     $(".gameCell").mouseleave(function(){
@@ -13,8 +16,7 @@ $(document).ready(function(){
 
     $(".gameCell").click(function(event){
 	var pos = $(this).position();
-	alert(pos.top);
-	//makeMove(pos.left % 100, pos.top % 100);
+	makeMove(pos.left % 100, pos.top % 100);
     });
 });
 
@@ -30,7 +32,7 @@ function makeBoard(){
 	    gameArray[i][j] = {html:$("<div></div>"),checked:false,owner:null};
 	    gameBoard.append(gameArray[i][j].html);
 	    gameArray[i][j].html.addClass("gameCell");
-	    gameArray[i][j].html.css("background-color","blue");
+	    //gameArray[i][j].html.css("background-color","blue");
 	    gameArray[i][j].html.width(100);
 	    gameArray[i][j].html.height(100);
 	    gameArray[i][j].html.css({
@@ -45,6 +47,42 @@ function makeBoard(){
 function makeMove(x,y){
     if (gameArray[x][y].owner === null){
 	gameArray[x][y].owner = gameTurn % 2;
+	gameArray[x][y].text(gameTurn % 2);
+	if (checkWin()){
+	    alert("Player " + gameTurn % 2 + " Wins!");
+	}
 	gameTurn++;
     }
+}
+
+function checkWin(){
+    if (getTile(0,0) !== null && getTile(0,0) == getTile(1,0) && getTile(1,0) == getTile(2,0)){
+	return true;
+    }
+    if (getTile(0,0) !== null && getTile(0,0) == getTile(0,1) && getTile(0,1) == getTile(0,2)){
+	return true;
+    }
+    if (getTile(1,0) !== null && getTile(1,0) == getTile(1,1) && getTile(1,1) == getTile(1,2)){
+	return true;
+    }
+    if (getTile(2,0) !== null && getTile(2,0) == getTile(2,1) && getTile(2,1) == getTile(2,2)){
+	return true;
+    }
+    if (getTile(0,1) !== null && getTile(0,1) == getTile(1,1) && getTile(1,1) == getTile(1,2)){
+	return true;
+    }
+    if (getTile(0,2) !== null && getTile(0,2) == getTile(1,2) && getTile(1,2) == getTile(2,2)){
+	return true;
+    }
+    if (getTile(0,0) !== null && getTile(0,0) == getTile(1,1) && getTile(1,1) == getTile(2,2)){
+	return true;
+    }
+    if (getTile(0,2) !== null && getTile(0,2) == getTile(1,1) && getTile(1,1) == getTile(2,0)){
+	return true;
+    }
+    return false;
+}
+    
+function getTile(x,y){
+    return gameArray[x][y].owner;
 }
