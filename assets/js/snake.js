@@ -125,7 +125,7 @@ function changeDir(key){
 }
 
 function moveSnake(){
-    alert("Move snake");
+    //alert("Move snake");
     if (dir == mLeft){
 	shiftSnake(-1,0);
     }
