@@ -167,7 +167,7 @@ function shiftSnake(x,y){
 	    bodyToAdd = 0;
 	}
 	else {
-	    boardArray[snakeEnd.x][snakeEnd.y] = setRec(boardArray[snakeEnd.x][snakeEnd.y],openType);
+	    boardArray[snakeEnd.x][snakeEnd.y] = setRect(boardArray[snakeEnd.x][snakeEnd.y],openType);
 	}
     }
 }
