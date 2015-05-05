@@ -94,6 +94,7 @@ a:hover, a:active {
     border: 5px solid black;
     width: 500px;
     height: 500px;
+    position: relative;
 }
 
 #startSnake {
