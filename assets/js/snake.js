@@ -107,6 +107,8 @@ function gameInit(){
     snakeBody.push({x:snakeHead.x,y:snakeHead.y - 2});
    // alert("Snake body push initial segs");
     boardArray[snakeHead.x][snakeHead.y] = setRect(boardArray[snakeHead.x][snakeHead.y],headType);
+    boardArray[snakeBody[0].x][snakeBody[0].y] = setRect(boardArray[snakeBody[0].x][snakeBody[0].y],bodyType);
+    boardArray[snakeBody[1].x][snakeBody[1].y] = setRect(boardArray[snakeBody[1].x][snakeBody[1].y],bodyType);
     dir = mDown;
     //alert("Snake init");
     setFood();
@@ -156,6 +158,7 @@ function shiftSnake(x,y){
     else {
 	var lastSegX = snakeHead.x;
 	var lastSegY = snakeHead.y;
+	boardArray[snakeHead.x][snakeHead.y] = setRect(boardArray[snakeHead.x][snakeHead.y],bodyType);
 	snakeHead.x += x;
 	snakeHead.y += y;
 	checkEat();
