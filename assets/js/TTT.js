@@ -73,7 +73,7 @@ function checkWin(){
     if (getTile(2,0) != 0 && getTile(2,0) == getTile(2,1) && getTile(2,1) == getTile(2,2)){
 	return true;
     }
-    if (getTile(0,1) != 0 && getTile(0,1) == getTile(1,1) && getTile(1,1) == getTile(1,2)){
+    if (getTile(0,1) != 0 && getTile(0,1) == getTile(1,1) && getTile(1,1) == getTile(2,1)){
 	return true;
     }
     if (getTile(0,2) != 0 && getTile(0,2) == getTile(1,2) && getTile(1,2) == getTile(2,2)){
