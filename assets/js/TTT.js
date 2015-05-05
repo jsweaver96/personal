@@ -10,7 +10,7 @@ $(document).ready(function(){
     });
 
     $(".gameCell").click(function(event){
-	alert(event.currentTarget.attr("position"));
+	alert(event.target.css("position"));
     });
 });
 
