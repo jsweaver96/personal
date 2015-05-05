@@ -48,6 +48,10 @@ $(document).ready(function(){
 	    $(this).css("background-color","#BCBCBC");
 	}
     });
+
+    $("#snakeArea").keydown(function(event){
+	changeDir(event.which);
+    });
 });
 
 function gameStart(){
@@ -75,7 +79,7 @@ function setRect(seg, type){
 }
 
 function gameInit(){
-running = true;
+    running = true;
     $("#startSnake").css("background-color","#4C4C4C");
     for (var i = 0; i < bxSize; i++){
 	boardArray[i] = new Array(bySize);
