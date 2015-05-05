@@ -49,9 +49,11 @@ $(document).ready(function(){
 	}
     });
 
-    $("#snakeArea").keydown(function(event){
-	alert("Keydown : " + event.which);
-	changeDir(event.which);
+    $(document).keydown(function(event){
+	if (!running){
+	    alert("Keydown : " + event.which);
+	    changeDir(event.which);
+	}
     });
 });
 
