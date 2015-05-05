@@ -57,9 +57,7 @@ $(document).ready(function(){
 function gameStart(){
     //alert("Start game");
     gameInit();
-    while(running){
-	moveSnake();
-    }
+    window.setInterval(moveSnake(), 100);
 }
 
 function setRect(seg, type){
