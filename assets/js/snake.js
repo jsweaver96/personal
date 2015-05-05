@@ -105,7 +105,7 @@ function gameInit(){
     snakeBody.push({x:snakeHead.x,y:snakeHead.y - 2});
    // alert("Snake body push initial segs");
     boardArray[snakeHead.x][snakeHead.y] = setRect(boardArray[snakeHead.x][snakeHead.y],headType);
-    dir = mUp;
+    dir = mDown;
     //alert("Snake init");
     setFood();
     //alert("Food init");
