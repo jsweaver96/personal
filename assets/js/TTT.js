@@ -47,7 +47,7 @@ function makeBoard(){
 function makeMove(x,y){
     if (gameArray[x][y].owner == 0){
 	gameArray[x][y].owner = gameTurn % 2 + 1;
-	gameArray[x][y].text(gameTurn % 2 + 1);
+	gameArray[x][y].html.text(gameTurn % 2 + 1);
 	if (checkWin()){
 	    alert("Player " + gameTurn % 2 + 1 + " Wins!");
 	}
