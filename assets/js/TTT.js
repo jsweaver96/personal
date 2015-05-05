@@ -31,7 +31,7 @@ function makeBoard(){
 	    var tempOff = gameArray[i][j].html.offsetParent();
 	    var tempX = tempOff.left + i * 100;
 	    var tempY = tempOff.top - j * 100;
-	    //gameArray[i][j].html.offset({left:tempX,top:tempY});
+	    gameArray[i][j].html.offset({left:tempX,top:tempY});
 	}
     }
 }
