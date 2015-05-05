@@ -116,32 +116,32 @@ function gameInit(){
 }
 
 function changeDir(key){
-    if (key == kLeft){
+    if (key == kLeft && snakeBody[0].x != snakeHead.x - 1){
 	dir = mLeft;
     }
-    else if (key == kRight){
+    else if (key == kRight && snakeBody[0].x != snakeHead.x + 1){
 	dir = mRight;
     }
-    else if (key == kUp){
+    else if (key == kUp && snakeBody[0].y != snakeHead.y - 1){
 	dir = mUp;
     }
-    else if (key == kDown){
+    else if (key == kDown && snakeBody[0].y != snakeHead.y + 1){
 	dir = mDown;
     }
 }
 
 function moveSnake(){
     //alert("Move snake");
-    if (dir == mLeft && snakeBody[0].x != snakeHead.x - 1){
+    if (dir == mLeft){
 	shiftSnake(-1,0);
     }
-    else if (dir == mRight && snakeBody[0].x != snakeHead.x + 1){
+    else if (dir == mRight){
 	shiftSnake(1,0);
     }
-    else if (dir == mUp && snakeBody[0].y != snakeHead.y - 1){
+    else if (dir == mUp){
 	shiftSnake(0,-1);
     }
-    else if (dir == mDown && snakeBody[0].y != snakeHead.y + 1){
+    else if (dir == mDown){
 	shiftSnake(0,1);
     }
 }
