@@ -49,13 +49,9 @@ function makeMove(x,y){
 	gameArray[x][y].owner = gameTurn % 2 + 1;
 	if (gameTurn % 2 + 1 == 1){
 	    gameArray[x][y].html.text("X");
-	    gameArray[x][y].html.css("font-size","100");
-	    gameArray[x][y].html.css("text-align","center");
 	}
 	else {
 	    gameArray[x][y].html.text("O");
-	    gameArray[x][y].html.css("font-size","100");
-	    gameArray[x][y].html.css("text-align","center");
 	}
 	if (checkWin()){
 	    alert("Player " + (gameTurn % 2 + 1) + " Wins!");
