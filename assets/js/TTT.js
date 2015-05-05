@@ -14,7 +14,7 @@ function makeBoard(){
     var gameBoard = $("<div></div>");
     gameBoard.addClass("TTT");
     gameBoard.css("background-color","red");
-    gameBoard.css("z-index","0");
+    //gameBoard.css("z-index","0");
     $("h1").after(gameBoard);
     var gameArray = new Array(3);
     for (var i = 0; i < 3; i++){
@@ -23,7 +23,7 @@ function makeBoard(){
 	    gameArray[i][j] = {html:$("<div></div>"),x:i,y:j};
 	    gameBoard.append(gameArray[i][j]);
 	    gameArray[i][j].html.addClass("gameCell");
-	    gameArray[i][j].html.css("z-index","1");
+	    //gameArray[i][j].html.css("z-index","1");
 	    gameArray[i][j].html.css("background-color","blue");
 	    gameArray[i][j].html.width(100);
 	    gameArray[i][j].html.height(100);
