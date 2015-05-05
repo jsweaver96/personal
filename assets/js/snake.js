@@ -132,16 +132,16 @@ function changeDir(key){
 
 function moveSnake(){
     //alert("Move snake");
-    if (dir == mLeft){
+    if (dir == mLeft && snakeBody[0].x != snakeHead.x - 1){
 	shiftSnake(-1,0);
     }
-    else if (dir == mRight){
+    else if (dir == mRight && snakeBody[0].x != snakeHead.x + 1){
 	shiftSnake(1,0);
     }
-    else if (dir == mUp){
+    else if (dir == mUp && snakeBody[0].y != snakeHead.y - 1){
 	shiftSnake(0,-1);
     }
-    else if (dir == mDown){
+    else if (dir == mDown && snakeBody[0].y != snakeHead.y + 1){
 	shiftSnake(0,1);
     }
 }
