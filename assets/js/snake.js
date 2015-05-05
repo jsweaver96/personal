@@ -25,7 +25,7 @@ var mRight = 3;
 var mDown = 4;
 
 var snakeHead;
-var snakeBody;
+var snakeBody = [];
 var bodySize = 2;
 var bodyToAdd = 0;
 var foodBit;
@@ -98,7 +98,6 @@ function gameInit(){
     //alert("Board init");
     snakeHead.x = bxSize / 2;
     snakeHead.y = bySize / 2;
-    snakeBody = [];
     alert("Snake body init");
     snakeBody.push({x:snakeHead.x,y:snakeHead.y - 1});
     snakeBody.push({x:snakeHead.x,y:snakeHead.y - 2});
