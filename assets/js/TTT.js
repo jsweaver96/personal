@@ -55,6 +55,7 @@ function makeMove(x,y){
 	}
 	if (checkWin()){
 	    alert("Player " + (gameTurn % 2 + 1) + " Wins!");
+	    location.reload();
 	}
 	gameTurn++;
     }
