@@ -8,6 +8,10 @@ $(document).ready(function(){
     $(".gameCell").mouseleave(function(){
 	$(this).css("background-color","white");
     });
+
+    $(".gameCell").click(function(event){
+	alert(event.currentTarget.position);
+    });
 });
 
 function makeBoard(){
@@ -23,20 +27,14 @@ function makeBoard(){
 	    gameArray[i][j] = {html:$("<div></div>"),x:i,y:j};
 	    gameBoard.append(gameArray[i][j].html);
 	    gameArray[i][j].html.addClass("gameCell");
-	    //gameArray[i][j].html.css("z-index","1");
 	    gameArray[i][j].html.css("background-color","blue");
 	    gameArray[i][j].html.width(100);
 	    gameArray[i][j].html.height(100);
-	    gameArray[i][j].html.text("(" + i + "," + j + ")");
-	    var tempOff = gameArray[i][j].html.offsetParent();
-	    var tempX = tempOff.left + i * 100;
-	    var tempY = tempOff.top - j * 100;
 	    gameArray[i][j].html.css({
 		position: "absolute",
 		left: i * 100 + "px",
 		top: j * 100 + "px"
 	    });
-	    //gameArray[i][j].html.offset({left:tempX,top:tempY});
 	}
     }
 }
