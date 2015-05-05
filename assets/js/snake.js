@@ -151,15 +151,16 @@ function shiftSnake(x,y){
 	endGame();
     }
     else {
-	var lastSeg = {x:snakeHead.x,y:snakeHead.y};
+	var lastSegX = snakeHead.x;
+	var lastSegY = snakeHead.y;
 	snakeHead.x += x;
 	snakeHead.y += y;
 	checkEat();
 	boardArray[snakeHead.x][snakeHead.y] = setRect(boardArray[snakeHead.x][snakeHead.y],headType);
 	var snakeEnd = snakeBody.pop();
 	snakeBody.unshift(snakeEnd);
-	snakeBody[0].x = lastSeg.x;
-	snakeBody[0].y = lastSeg.y;
+	snakeBody[0].x = lastSegX;
+	snakeBody[0].y = lastSegY;
 	if (bodyToAdd){
 	    snakeBody.push({x:snakeEnd.x,y:snakeEnd.y});
 	    bodySize += 1;
