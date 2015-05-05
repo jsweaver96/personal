@@ -5,7 +5,7 @@ $(document).ready(function(){
     makeBoard();
     $(".gameCell").mouseover(function(){
 	var pos = $(this).position();
-	if (getTile(pos.left % 100, pos.top % 100) == 0){
+	if (getTile(pos.left / 100, pos.top / 100) == 0){
 	    $(this).css("background-color","gray");
 	}
     });
@@ -17,7 +17,7 @@ $(document).ready(function(){
     $(".gameCell").click(function(event){
 	var pos = $(this).position();
 	alert("X " + pos.left + " Y " + pos.top);
-	makeMove(pos.left % 100, pos.top % 100);
+	makeMove(pos.left / 100, pos.top / 100);
     });
 });
 
@@ -50,7 +50,7 @@ function makeMove(x,y){
 	gameArray[x][y].owner = gameTurn % 2 + 1;
 	gameArray[x][y].html.text(gameTurn % 2 + 1);
 	if (checkWin()){
-	    alert("Player " + gameTurn % 2 + 1 + " Wins!");
+	    alert("Player " + (gameTurn % 2 + 1) + " Wins!");
 	}
 	gameTurn++;
     }
