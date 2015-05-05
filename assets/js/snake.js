@@ -193,7 +193,7 @@ function setFood(){
     var checked = false;
     while(!checked){
 	checked = true;
-	foodBit = {x:Math.random() * (bxSize - 2) + 1,y:Math.random() * (bxSize - 2) + 1};
+	foodBit = {x:Math.floor(Math.random() * (bxSize - 2) + 1),y:Math.floor(Math.random() * (bxSize - 2) + 1)};
 	if (foodBit.x == snakeHead.x && foodBit.y == snakeHead.y){
 	    checked = false;
 	    continue;
