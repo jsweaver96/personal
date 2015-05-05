@@ -85,6 +85,7 @@ function gameInit(){
     for (var i = 0; i < bxSize; i++){
 	boardArray[i] = new Array(bySize);
 	for (var j = 0; j < bySize; j++){
+	    $("#snakeArea").append(boardArray[i][j].html);
 	    boardArray[i][j] = {html:$("<div></div>"),type:openType};
 	    boardArray[i][j].html.addClass("segment");
 	    boardArray[i][j].html.width(segSize);
