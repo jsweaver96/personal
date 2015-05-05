@@ -63,7 +63,7 @@ function gameStart(){
 }
 
 function setRect(seg, type){
-    alert("Start setRect");
+    //alert("Start setRect");
     seg.type = type;
     if (seg.type == openType){
 	seg.html.css("background-color",openClr);
@@ -77,7 +77,7 @@ function setRect(seg, type){
     else if (seg.type == bodyType){
 	seg.html.css("background-color",bodyClr);
     }
-    alert("End setRect");
+    //alert("End setRect");
     return seg;
 }
 
@@ -106,9 +106,9 @@ function gameInit(){
    // alert("Snake body push initial segs");
     boardArray[snakeHead.x][snakeHead.y] = setRect(boardArray[snakeHead.x][snakeHead.y],headType);
     dir = mUp;
-    alert("Snake init");
+    //alert("Snake init");
     setFood();
-    alert("Food init");
+    //alert("Food init");
 }
 
 function changeDir(key){
@@ -205,6 +205,6 @@ function setFood(){
 	    }
 	}
     }
-    alert("end set food " + foodBit.x + ", " + foodBit.y);
+    //alert("end set food " + foodBit.x + ", " + foodBit.y);
     boardArray[foodBit.x][foodBit.y] = setRect(boardArray[foodBit.x][foodBit.y],foodType);
 }
