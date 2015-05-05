@@ -106,3 +106,7 @@ a:hover, a:active {
     position: relative;
     top: 50px;
 }
+
+.segment {
+    position: absolute;
+}
