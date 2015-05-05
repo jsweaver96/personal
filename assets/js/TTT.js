@@ -23,7 +23,7 @@ $(document).ready(function(){
 function makeBoard(){
     var gameBoard = $("<div></div>");
     gameBoard.addClass("TTT");
-    //gameBoard.css("background-color","red");
+    gameBoard.css("background-color","white");
     //gameBoard.css("z-index","0");
     $("h1").after(gameBoard);
     for (var i = 0; i < 3; i++){
