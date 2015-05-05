@@ -205,6 +205,6 @@ function setFood(){
 	    }
 	}
     }
-    alert("end set food");
+    alert("end set food " + foodBit.x + ", " + foodBit.y);
     boardArray[foodBit.x][foodBit.y] = setRect(boardArray[foodBit.x][foodBit.y],foodType);
 }
