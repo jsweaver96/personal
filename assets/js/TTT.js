@@ -25,8 +25,8 @@ function makeBoard(){
 	    gameArray[i][j].html.addClass("gameCell");
 	    //gameArray[i][j].html.css("z-index","1");
 	    gameArray[i][j].html.css("background-color","blue");
-	    //gameArray[i][j].html.width(100);
-	    //gameArray[i][j].html.height(100);
+	    gameArray[i][j].html.width(100);
+	    gameArray[i][j].html.height(100);
 	    gameArray[i][j].html.text("(" + i + "," + j + ")");
 	    var tempOff = gameArray[i][j].html.offsetParent();
 	    var tempX = tempOff.left + i * 100;
