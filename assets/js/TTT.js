@@ -23,6 +23,10 @@ $(document).ready(function(){
 	    makeMove(pos.left / 100, pos.top / 100);
 	}
     });
+
+    $("#restart").click(function(){
+	onRestart();
+    });
 });
 
 function makeBoard(){
