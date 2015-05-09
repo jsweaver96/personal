@@ -96,7 +96,7 @@ a:hover, a:active {
     width: 100px;
     height: 150px;
     position: relative;
-    top: 0px;
+    top: -50px;
     left: -500px;
     margin-left: auto;
     margin-top: auto;
@@ -110,7 +110,7 @@ a:hover, a:active {
     border: 5px solid black;
     border-radius: 3px;
     position: relative;
-    top: -100px;
+    top: -50px;
     left: -300px;
     margin-left: auto;
     margin-top: auto;
