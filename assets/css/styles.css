@@ -96,8 +96,8 @@ a:hover, a:active {
     width: 100px;
     height: 150px;
     position: relative;
-    top: 150px;
-    left: -400px;
+    top: 0px;
+    left: -500px;
     margin-left: auto;
     margin-top: auto;
 }
@@ -111,7 +111,7 @@ a:hover, a:active {
     border-radius: 3px;
     position: relative;
     top: -100px;
-    left: -200px;
+    left: -300px;
     margin-left: auto;
     margin-top: auto;
 }
