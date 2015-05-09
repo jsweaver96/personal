@@ -18,7 +18,7 @@ $(document).ready(function(){
     });
 
     $("#restart").mouseleave(function(){
-	$(this).css("background-color","#999999");
+	$(this).css("background-color","#E6E6E6");
     });
     
     /* Return the tile color to white when the mouse leaves the tile area */
