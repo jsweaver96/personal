@@ -94,9 +94,9 @@ a:hover, a:active {
     border: 5px solid black;
     border-radius: 3px;
     width: 100px;
-    height: 250px;
-    position: absolute;
-    top: 750px;
+    height: 150px;
+    position: relative;
+    top: 0px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -108,8 +108,8 @@ a:hover, a:active {
     background-color: #999999;
     border: 5px solid black;
     border-radius: 3px;
-    position: absolute;
-    top: 750px;
+    position: relative;
+    top: 0px;
     margin-left: auto;
     margin-right: auto;
 }

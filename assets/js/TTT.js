@@ -71,6 +71,7 @@ function makeMove(x,y){
 		setStatus("Player 2 wins!");
 	    }
 	    gameOver = true;
+	    return;
 	}
 	
 	gameTurn++;
