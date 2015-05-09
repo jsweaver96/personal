@@ -1,30 +1,36 @@
 var gameArray = new Array(3);
 var gameTurn = 0;
+var gameOver = false;
 
+/* On start */
 $(document).ready(function(){
-    makeBoard();
+    makeBoard(); // Setup the board
+    /* Set background of game tile to gray when the mouse is hovering*/
     $(".gameCell").mouseover(function(){
 	var pos = $(this).position();
 	if (getTile(pos.left / 100, pos.top / 100) == 0){
 	    $(this).css("background-color","gray");
 	}
     });
-    
+    /* Return the tile color to white when the mouse leaves the tile area */
     $(".gameCell").mouseleave(function(){
 	$(this).css("background-color","white");
     });
-
+    /* Make move if game is running */
     $(".gameCell").click(function(event){
 	var pos = $(this).position();
-	makeMove(pos.left / 100, pos.top / 100);
+	if (!gameOver){
+	    makeMove(pos.left / 100, pos.top / 100);
+	}
     });
 });
 
 function makeBoard(){
+    setStatus("Player 1's move");
+    gameOver = false;
     var gameBoard = $("<div></div>");
     gameBoard.addClass("TTT");
     gameBoard.css("background-color","white");
-    //gameBoard.css("z-index","0");
     $("h1").after(gameBoard);
     for (var i = 0; i < 3; i++){
 	gameArray[i] = new Array(3);
@@ -54,10 +60,23 @@ function makeMove(x,y){
 	    gameArray[x][y].html.text("O");
 	}
 	if (checkWin()){
-	    alert("Player " + (gameTurn % 2 + 1) + " Wins!");
-	    location.reload();
+	    if (gameTurn % 2 == 0){
+		setStatus("Player 1 wins!");
+	    }
+	    else {
+		setStatus("Player 2 wins!");
+	    }
+	    gameOver = true;
 	}
+	
 	gameTurn++;
+	
+	if (gameTurn % 2 == 0){
+	    setStatus("Player 1's move");
+	}
+	else{
+	    setStatus("Player 2's move");
+	}
     }
 }
 
@@ -91,4 +110,12 @@ function checkWin(){
     
 function getTile(x,y){
     return gameArray[x][y].owner;
+}
+
+function setStatus(str){
+    $("#status").text("Current Status: " + str);
+}
+
+function onRestart(){
+    location.reload();
 }
