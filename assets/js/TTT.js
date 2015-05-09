@@ -12,6 +12,15 @@ $(document).ready(function(){
 	    $(this).css("background-color","gray");
 	}
     });
+
+    $("#restart").mouseover(function(){
+	$(this).css("background-color","#333333");
+    });
+
+    $("#restart").mouseleave(function(){
+	$(this).css("background-color","#999999");
+    });
+    
     /* Return the tile color to white when the mouse leaves the tile area */
     $(".gameCell").mouseleave(function(){
 	$(this).css("background-color","white");

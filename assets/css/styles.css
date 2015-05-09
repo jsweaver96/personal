@@ -98,6 +98,8 @@ a:hover, a:active {
     position: relative;
     top: -50px;
     left: -100px;
+    margin-left: auto;
+    margin-top: auto;
 }
 
 #restart {
@@ -110,6 +112,8 @@ a:hover, a:active {
     position: relative;
     top: -50px;
     left: 100px;
+    margin-left: auto;
+    margin-top: auto;
 }
 
 /* Snake Styles */
