@@ -1,27 +1,218 @@
-﻿<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Jacob's Games</title>
-    <link rel="stylesheet" href="/personal/assets/css/styles.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script type="text/javascript" src="/personal/assets/js/front.js"></script>
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<head>
+    <title>Johns Hopkins</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  ga('create', 'UA-69128319-1', 'auto');
-  ga('send', 'pageview');
+    <!--Non Versioned CSS-->
+    <link href="/Content/css?v=BWU150BZNND-vrQzriy6MezpunRDB5obWYFnL-NL0zM1" rel="stylesheet"/>
 
-</script>
-  </head>
-  <h1 id="header">Welcome to Jacob's Games!</h1>
-  <div id="gamesTab">Click for Games</div>
-  <div id="sidebar">
-    <ul>
-      <li><a href="/personal/html/TTT.html">Tic-Tac-Toe</a></li>
-      <li><a href="/personal/html/Snake.html">Snake</a></li>
-    </ul>
-  </div>
+    <link href="/Content/jquery/css?v=wQl4V-0IpqRaMgOjuMrOg_DBZcyClmZDYKOCtDvWGvQ1" rel="stylesheet"/>
+
+
+    <!--Non Versioned Javascript-->
+    <script src="/bundles/jquery?v=6ZxffcLdsuJhuzCXyxjwhZM_ze2a37W4dS1jmqlrOB81"></script>
+
+    <script src="/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+    <script src="/bundles/pollyfills?v=G3DB1AEDHNGhlFjQVpsQLfB1VJnLDvAdQc-lI9ajOQE1"></script>
+
+    <script src="/bundles/styling?v=X79Q0TJQH4jp39njKvhrlW93GPeJpLtRThxdBnKVglQ1"></script>
+
+    <script src="/bundles/mask?v=BZw5JZgS3p3XGcVojSpIhpGWpozl3HGWmrGfEnz5VV81"></script>
+
+    <script src="/bundles/bootstrap?v=NzP9D5jO6GVMzY8_4Kfk811W0VrrhYdC5doOJzjbWJc1"></script>
+
+
+    <!--Version from Config-->
+
+
+    <!--Versioned CSS-->
+    <link href="/Content/Site.css?2015.3.08.09" rel="stylesheet"/>
+
+    <link href="/Content/print.css?2015.3.08.09" rel="stylesheet" media="print" />
+
+<link href="/Content/JHStyles/JH.css?2015.3.08.09" rel="stylesheet" media="all" />
+
+
+    <!--Versioned Javascript-->
+    <script src="/Scripts/fontresize.js?2015.3.08.09"></script>
+
+    <script src="/Scripts/print.js?2015.3.08.09"></script>
+
+    <script src="/Scripts/sliding.form.js?2015.3.08.09"></script>
+
+    <script src="/Scripts/site.js?2015.3.08.09"></script>
+
+    <script src="/Scripts/quote.js?2015.3.08.09"></script>
+
+
+    <!-- Google analytics -->
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-69128319-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+</head>
+<body>
+    <!-- Google Tag Manager -->
+    
+
+    <div id="wrap" class="fontresize">
+
+        <div id="main">
+
+            
+
+
+
+            <div id="header" >
+                <div class="container">
+                    <div id="logo">
+
+
+                        <a href="/2016/g/20f40758946d408189d4d5246ed4fd06" class="site-logo" title="Johns Hopkins">
+                            <img src="/Content/Logos/JH_Logo.png" alt="Johns Hopkins" />
+                        </a>
+                    </div>
+
+                    <div id="phonenumber" style="margin-top: 27px;">
+Call 1-866-325-0620; TTY: 711                            <br />
+8 a.m. - 8 p.m., 7 days a week.                            <br />
+From February 15 – September 30,                            <br />
+you will need to leave a message                            <br />
+on weekends and holidays.                            <br />
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear">
+                
+            </div>
+
+            <div id="Content">
+
+                
+
+                <div id="banner" style="background: url('/Content/images/Banner_JH_Medicare.jpg') repeat scroll left bottom #E4F5D9">
+                    
+
+
+
+
+
+<div id="quoteBox">
+
+<form action="/2016/g/20f40758946d408189d4d5246ed4fd06/Quote/GetQuote" method="post">            <h3>Find Your Plan</h3>
+        <hr />
+Enter your ZIP code below to find Johns Hopkins            <br />
+Medicare Advantage MD (PPO) plans and review rates.            <br />
+            <br />
+            <label>Zip Code</label>
+        <br />
+        <div id="criteriaRows">
+            <div class="criteriaRow">
+
+            </div>
+        </div>
+<input class="input-text required" id="Location_Zip" maxlength="5" name="Location.Zip" type="zip" value="" /><input data-val="true" data-val-number="The field CarrierId must be a number." data-val-required="The CarrierId field is required." id="CarrierId" name="CarrierId" type="hidden" value="0" /><input id="County" name="Location.County" type="hidden" value="" />        <input type="submit" value="Compare Our Plans" class="getquoteBtn" id="GetQuoteBtn" />
+</form>
+    <div id="dialog" title="Create Album">
+        Counties
+    </div>
+</div>
+<div id="bannerCTA">
+
+
+</div>
+
+
+                    <!-- <img class=" hidden-xs" src="~/Content/images/Banner_MH_Medicare.JPG" alt="Find the right medicare product for you!"/>-->
+                    <!--<h2 style="position: absolute; left: 500px; bottom: 20px;" class="hidden-sm hidden-xs">Find the right medicare product for you!</h2>-->
+                </div>
+                <div id="textResize">
+                    Resize: <a href="javascript:changeFontSize(14)" class="texttoggler" rel="normalview" title="normal size">
+                        <img src="/Content/images/normalview.png" width="20"/>
+                    </a>
+                    <a href="javascript:changeFontSize(16)" class="texttoggler" rel="largeview" title="large size">
+                        <img src="/Content/images/largeview.png" width="20"/>
+                    </a>
+                    <a href="javascript:changeFontSize(18)" class="texttoggler" rel="xlargeview" title="extra large size">
+                        <img src="/Content/images/xlargeview.png" width="20"/>
+                    </a>
+
+                </div>
+                <div class="container">
+                    <hr/>
+                    <div id="pageBottom">
+                                        <b></b>
+                                        <br/>
+                                        <br/>
+
+                    </div>
+
+                    
+
+
+
+<div id="disclaimerContainer" class="disclaimerContainer">
+                    <h3>Disclaimer of Warranties and Liabilities</h3>
+                    <p>Johns Hopkins Advantage MD is a PPO plan with a Medicare contract. Enrollment in Johns Hopkins Advantage MD depends on contract renewal.</p>
+                    <p>This information is not a complete description of benefits. Contact the plan for more information. Limitations, co-payments, and restrictions may apply. Benefits, premiums and/or co-payments/co-insurance may change on January 1 of each year.</p>
+                    <p>
+The formulary, pharmacy network and/or provider network may change at any time. You will receive notice when necessary.</p>
+                    <p>
+You must continue to pay your Medicare Part B premium.</p>
+
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <p>
+                <span style="float: left; text-align: left">
+                    Last updated: 10/1/15 | H3890_OnEnroll_0815 CMS Approved
+                </span>
+                <span style="float: right;">&#169; 2015 Johns Hopkins Advantage MD</span>
+            </p>
+        </div>
+    </footer>
+</body>
 </html>
